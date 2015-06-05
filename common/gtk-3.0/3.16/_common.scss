@@ -1139,10 +1139,16 @@ GtkComboBox {
 
   .csd & { background-color: $header_bg; }
 
-  &:backdrop { color: transparentize($header_fg, 0.3); }
+  &:backdrop {
+    color: transparentize($header_fg, 0.3);
+    background-color: opacify($header_bg, 1);
+
+    .csd & { background-color: lighten($header_bg, 3%); }
+  }
 }
 
-.titlebar .titlebar { background-color: transparent; }
+.titlebar .titlebar,
+.titlebar .titlebar:backdrop { background-color: transparent; }
 
 // Only extending .header-bar avoids some problems (Gnome Documents searchbar)
 .header-bar {

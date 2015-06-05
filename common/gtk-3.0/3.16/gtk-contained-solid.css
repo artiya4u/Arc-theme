@@ -863,9 +863,13 @@ GtkComboBox {
   .csd .titlebar {
     background-color: #e7e8eb; }
   .titlebar:backdrop {
-    color: rgba(82, 93, 118, 0.5); }
+    color: rgba(82, 93, 118, 0.5);
+    background-color: #e7e8eb; }
+    .csd .titlebar:backdrop {
+      background-color: #eff0f2; }
 
-.titlebar .titlebar {
+.titlebar .titlebar,
+.titlebar .titlebar:backdrop {
   background-color: transparent; }
 
 .primary-toolbar .separator, .primary-toolbar GtkPlacesSidebar.sidebar .view.separator, GtkPlacesSidebar.sidebar .primary-toolbar .view.separator, .header-bar .header-bar-separator, .header-bar > GtkBox > .separator.vertical {
